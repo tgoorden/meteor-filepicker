@@ -3,9 +3,8 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-	api.use('coffeescript','client');
-	api.add_files('test.js', 'client');
-	
+	api.use('handlebars','client');
+	api.use('jquery','client');
 	api.add_files('filepicker-io.js', 'client');
 	api.export('FilePicker','client');
 	
