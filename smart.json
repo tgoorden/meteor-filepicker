@@ -1,0 +1,9 @@
+{
+  "name": "FilePicker IO",
+  "description": "A drop-in package to use FilePicker in Meteor",
+  "homepage": "",
+  "author": "Thomas Goorden <thomas@ensemblage.be> (http://www.ensemblage.be)",
+  "version": "0.0.1",
+  "git": "",
+  "packages": {}
+}
