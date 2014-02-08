@@ -5,7 +5,8 @@ Package.describe({
 Package.on_use(function (api) {
 	api.use('handlebars','client');
 	api.use('jquery','client');
-	api.add_files('filepicker-io.js', 'client');
-	api.export('FilePicker','client');
+	api.use('coffeescript','client');
+	api.add_files('filepicker-io.coffee', 'client');
+	api.export('FilePickerIO','client');
 	
 });
