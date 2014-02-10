@@ -1,7 +1,5 @@
 class FilePickerIO
 	constructor: (key) ->
-		console.log "Initiating FilePickerIO"
-		console.log key
 		filepicker_src = $("head #filepicker-src")
 		if !filepicker_src.length
 			script = document.createElement 'script'
@@ -18,6 +16,14 @@ class FilePickerIO
 				console.log error
 			head = document.getElementsByTagName('head')[0]
 			head.appendChild(script)
+		if Meteor.setting.public.filepicker.options
+			this.defaultOptions = Meteor.setting.public.filepicker.options
+		else
+			this.defaultOptions =
+				multiple: true
+				mimetype: */*
+		return
 	makeDropPane: (dropPane,options) ->
+		initialize()
 		filepicker.makeDropPane(dropPane, options)
 
